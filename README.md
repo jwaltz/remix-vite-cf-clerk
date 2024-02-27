@@ -1,3 +1,10 @@
+# Deploying to CF Pages
+0. Create a new CF Pages application
+1. Select Remix for framework preset
+2. Set the build command to `bun run build`
+3. Set the output directory to `/build/client`
+4. Add environment variables `CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY`
+
 # Welcome to Remix + Vite!
 
 📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/future/vite) for details on supported features.
