@@ -5,6 +5,11 @@
 3. Set the output directory to `/build/client`
 4. Add environment variables `CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY`
 
+# Reproducing "TypeError: Cannot read properties of undefined (reading 'CLERK_API_KEY')"
+1. Navigate to the deployment and select the Functions tab
+2. Begin Log Stream under Real-time Logs
+3. Browse the production url and observe the error in the logs
+
 # Welcome to Remix + Vite!
 
 📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/future/vite) for details on supported features.
