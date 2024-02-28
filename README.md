@@ -10,6 +10,9 @@
 2. Begin Log Stream under Real-time Logs
 3. Browse the production url and observe the error in the logs
 
+# Reproducing "TypeError: Cannot read properties of undefined (reading 'CLERK_JWT_KEY')"
+1. Same as above but deploy the `clerk_jwt_key_undefined` branch
+
 # Welcome to Remix + Vite!
 
 📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/future/vite) for details on supported features.
