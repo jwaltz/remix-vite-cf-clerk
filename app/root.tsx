@@ -11,16 +11,10 @@ import { rootAuthLoader } from "@clerk/remix/ssr.server";
 import { LoaderFunction } from "@remix-run/cloudflare";
 
 export const loader: LoaderFunction = args => {
-  return rootAuthLoader(args, ({ request }) => {
-    console.log(args.context.cloudflare.env);
-    console.log(request.auth);
-
-    return {};
-  }, {
+  return rootAuthLoader(args, {
     secretKey: args.context.cloudflare.env.CLERK_SECRET_KEY,
     publishableKey: args.context.cloudflare.env.CLERK_PUBLISHABLE_KEY,
-  }
-  );
+  });
 };
 
 export function Layout({ children }: { children: React.ReactNode }) {
