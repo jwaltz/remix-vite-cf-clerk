@@ -12,8 +12,8 @@ import { LoaderFunction } from "@remix-run/cloudflare";
 
 export const loader: LoaderFunction = args => {
   return rootAuthLoader(args, ({ request }) => {
-    console.log(args.context.cloudflare.env);
-    console.log(request.auth);
+    console.log("Env", args.context.cloudflare.env);
+    console.log("Request.auth", request.auth);
 
     return {};
   }, {

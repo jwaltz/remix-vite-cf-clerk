@@ -4,6 +4,8 @@ import { LoaderFunctionArgs, redirect } from "@remix-run/cloudflare";
 export const loader = async (args: LoaderFunctionArgs) => {
   const { userId: clerkId } = await getAuth(args);
 
+  console.log("clerkId", clerkId);
+
   if (!clerkId) {
     return redirect("/sign-in?redirect_url=" + args.request.url);
   }
