@@ -1,14 +1,9 @@
-# Deploying to CF Pages
-0. Create a new CF Pages application
-1. Select Remix for framework preset
-2. Set the build command to `bun run build`
-3. Set the output directory to `/build/client`
-4. Add environment variables `CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY`
-
-# Reproducing "TypeError: Cannot read properties of undefined (reading 'CLERK_API_KEY')"
-1. Navigate to the deployment and select the Functions tab
-2. Begin Log Stream under Real-time Logs
-3. Browse the production url and observe the error in the logs
+# Reproducing Issue:
+1. Add environment variables `CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY` to `.dev.vars`.
+2. Run `npm run dev` and open the app in the browser.
+3. Sign-in and view value of `request.auth`.
+4. Observe hydration and UI mismatch errors in the browser console.
+4. Observe 3rd party cookie warnings from Chrome browser.
 
 # Welcome to Remix + Vite!
 
