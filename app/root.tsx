@@ -6,7 +6,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import { ClerkApp } from "@clerk/remix";
+import { ClerkApp, ClerkErrorBoundary } from "@clerk/remix";
 import { rootAuthLoader } from "@clerk/remix/ssr.server";
 import { LoaderFunction } from "@remix-run/cloudflare";
 
@@ -22,6 +22,8 @@ export const loader: LoaderFunction = args => {
   }
   );
 };
+
+export const ErrorBoundary = ClerkErrorBoundary();
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
